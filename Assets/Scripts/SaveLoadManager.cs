@@ -20,7 +20,7 @@ public class SaveLoadManager : MonoBehaviour {
 
     public static int[] LoadPlayer()
     {
-        if (File.Exists(Application.persistentDataPath + "/player.slt"))
+        if (File.Exists(Application.dataPath + "/player.slt"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream stream = new FileStream(Application.dataPath + "/player.slt", FileMode.Open);
