@@ -11,7 +11,6 @@ public class SaveLoadManager : MonoBehaviour {
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream stream = new FileStream(Application.dataPath + "/player.slt", FileMode.Create);
-        Debug.Log(Application.persistentDataPath);
         PlayerData data = new PlayerData(player);
 
         bf.Serialize(stream, data);
